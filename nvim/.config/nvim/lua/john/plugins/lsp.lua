@@ -71,8 +71,8 @@ return {
       local cmp = require("cmp")
       local cmp_action = lsp_zero.cmp_action()
       local cmp_format = lsp_zero.cmp_format()
+      require("luasnip.loaders.from_vscode").lazy_load()
       cmp.setup({
-        -- require("luasnip.loaders.from_vscode").lazy_load()
         sources = {
           {name = "nvim_lsp"},
           {name = "luasnip"},
