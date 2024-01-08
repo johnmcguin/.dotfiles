@@ -22,3 +22,5 @@ vim.filetype.add({
 		mdx = "markdown.mdx",
 	}
 })
+-- default colorscheme
+vim.cmd("colorscheme catppuccin-frappe")

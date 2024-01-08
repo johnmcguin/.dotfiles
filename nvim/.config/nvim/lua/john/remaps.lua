@@ -44,3 +44,8 @@ vim.keymap.set("v", "<", "<gv^")
 vim.keymap.set("v", ">", ">gv^")
 -- stay in visual mode after visual mode yank
 vim.keymap.set("v", "y", "ygv^")
+
+-- diagnostics 
+vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", { desc = "Diagnostics - Open Float" })
+vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", { desc = "Diagnostics - previous diagnostic" })
+vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>", { desc = "Diagnostics - next diagnostic" })
