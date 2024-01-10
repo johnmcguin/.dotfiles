@@ -133,3 +133,9 @@ load-nvmrc
 . "/opt/homebrew/opt/asdf/libexec/asdf.sh"
 
 . "/opt/homebrew/opt/asdf/etc/bash_completion.d/asdf.bash"
+
+# better cd
+setopt auto_cd
+cdpath=(. $HOME $HOME/Projects $HOME/Brain $HOME/Playground)
+
+
