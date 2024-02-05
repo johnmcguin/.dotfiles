@@ -17,6 +17,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.keymap.set("n", "ga", "<cmd>lua vim.lsp.buf.code_action()<cr>", {buffer = bufnr, desc = "[G]o to Code [A]ctions"})
     vim.keymap.set("n", "<F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", {buffer = bufnr, desc = "rename"})
     vim.keymap.set({"n", "x"}, "<leader><leader>f", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", {buffer = bufnr, desc = "Format"})
+    -- go to definition in a new vertical split
+    vim.keymap.set("n", "<leader>gd", function ()
+      vim.cmd([[vsplit]])
+      vim.lsp.buf.definition()
+    end, {buffer = bufnr, desc = "Format"})
   end
 })
 
