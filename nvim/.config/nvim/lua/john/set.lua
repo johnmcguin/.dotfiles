@@ -23,7 +23,16 @@ vim.filetype.add({
 	}
 })
 -- default colorscheme
-vim.cmd("colorscheme catppuccin-frappe")
+vim.cmd("colorscheme anderson")
+
+-- diagnostic configs
+vim.diagnostic.config({
+  virtual_text = {
+    source = true
+  },
+  signs = true
+})
+
 vim.filetype.add({
   pattern = {
     ["%.env%.[%w_.-]+"] = "sh"

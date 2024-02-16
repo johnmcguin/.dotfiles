@@ -129,7 +129,8 @@ load-nvmrc() {
 
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
-# export PATH=/Library/PostgreSQL/15/bin:$PATH
+export PATH=/Library/PostgreSQL/15/bin:$PATH
+export GPG_TTY=$(tty)
 
 . "/opt/homebrew/opt/asdf/libexec/asdf.sh"
 
