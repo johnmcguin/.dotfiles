@@ -24,3 +24,8 @@ vim.filetype.add({
 })
 -- default colorscheme
 vim.cmd("colorscheme catppuccin-frappe")
+vim.filetype.add({
+  pattern = {
+    ["%.env%.[%w_.-]+"] = "sh"
+  }
+})
