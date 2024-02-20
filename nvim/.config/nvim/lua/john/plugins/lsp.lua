@@ -48,7 +48,8 @@ return {
           timeout_ms = 10000
         },
         servers = {
-          ["elixirls"] = {"elixir"}
+          ["elixirls"] = {"elixir"},
+          ["terraformls"] = {"terraform"}
         }
       })
 
