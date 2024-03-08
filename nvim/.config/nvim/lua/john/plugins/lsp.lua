@@ -49,7 +49,8 @@ return {
         },
         servers = {
           ["elixirls"] = {"elixir"},
-          ["terraformls"] = {"terraform"}
+          ["terraformls"] = {"terraform"},
+          ["elmls"] = {"elm"}
         }
       })
 
