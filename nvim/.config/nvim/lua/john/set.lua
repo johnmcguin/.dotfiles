@@ -23,7 +23,8 @@ vim.filetype.add({
 	}
 })
 -- default colorscheme
-vim.cmd("colorscheme anderson")
+-- vim.cmd("colorscheme anderson")
+vim.cmd("colorscheme catppuccin-mocha")
 
 -- diagnostic configs
 vim.diagnostic.config({

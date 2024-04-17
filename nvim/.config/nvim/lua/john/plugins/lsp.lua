@@ -20,6 +20,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     -- go to definition in a new vertical split
     vim.keymap.set("n", "<leader>gd", function ()
       vim.cmd([[vsplit]])
+
       vim.lsp.buf.definition()
     end, {buffer = bufnr, desc = "Format"})
   end
@@ -83,15 +84,16 @@ return {
         sources = {
           {name = "nvim_lsp"},
           {name = "luasnip"},
+          {name = "codeium"},
         },
         mapping = cmp.mapping.preset.insert({
           -- select the selected item with <CR> (instead of default <C-y>
-          ["<CR>"] = cmp.mapping.confirm({select = false}),
+          -- ["<CR>"] = cmp.mapping.confirm({select = false}),
           -- Enable tab navigation behavior through the completion menu
           -- If this is undesirable, see https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/autocomplete.md#enable-super-tab
           -- atm, I can"t tell the diff between the two options in the documentation. I need to just experience it and see if I like it.
-          ["<Tab>"] = cmp_action.luasnip_supertab(),
-          ["<S-Tab>"] = cmp_action.luasnip_shift_supertab()
+          -- ["<Tab>"] = cmp_action.luasnip_supertab(),
+          -- ["<S-Tab>"] = cmp_action.luasnip_shift_supertab()
         }),
         formatting = cmp_format
       })
