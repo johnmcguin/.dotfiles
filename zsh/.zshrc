@@ -135,8 +135,11 @@ export GPG_TTY=$(tty)
 . "/opt/homebrew/opt/asdf/libexec/asdf.sh"
 
 . "/opt/homebrew/opt/asdf/etc/bash_completion.d/asdf.bash"
-
+. "~/.asdf/plugins/golang/set-env.zsh"
 # better cd
 cdpath=(. $HOME $HOME/Projects $HOME/Brain $HOME/Playground)
 
 
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
