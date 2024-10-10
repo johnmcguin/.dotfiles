@@ -51,7 +51,9 @@ return {
         servers = {
           ["elixirls"] = {"elixir"},
           ["terraformls"] = {"terraform"},
-          ["elmls"] = {"elm"}
+          ["elmls"] = {"elm"},
+          ["tsserver"] = {"javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx", "astro"},
+          ["svelte"] = {"svelte"}
         }
       })
 
