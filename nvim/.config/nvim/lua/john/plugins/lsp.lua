@@ -123,8 +123,13 @@ return {
           end
         end,
         sources = {
-          -- Replace these with the tools you have installed
-          null_ls.builtins.formatting.prettierd,
+          null_ls.builtins.formatting.prettierd.with({
+            -- this is all file types + the addition of astro
+            filetypes = {
+              "javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "css", "scss", "less",
+              "html", "json", "jsonc", "yaml", "markdown", "markdown.mdx", "graphql", "handlebars", "astro"
+            }
+          }),
         }
       })
 
