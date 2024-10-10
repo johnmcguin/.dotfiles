@@ -1,16 +1,16 @@
 # bitwarden
-bwfind() {
+function bwfind() {
   bw list items --search $1 | jq '.[] | .name,.login'
 }
 alias bwf="bwfind"
 
-bwsession() {
+function bwsession() {
   export BW_SESSION=$(bw unlock --raw)
 }
 alias bws="bwsession"
 
 # node utils
-nscripts() {
+function nscripts() {
   cat package.json | jq '.scripts'
 }
 
