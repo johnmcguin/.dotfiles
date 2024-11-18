@@ -22,7 +22,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
       vim.cmd([[vsplit]])
 
       vim.lsp.buf.definition()
-    end, {buffer = bufnr, desc = "Format"})
+    end, {buffer = bufnr, desc = "[G]o to [D]efintion in a new vertical split"})
   end
 })
 
@@ -58,6 +58,7 @@ return {
       })
 
       require("mason").setup({})
+      local lsp_configurations = require("lspconfig.configs")
       require("mason-lspconfig").setup({
         ensure_installed = {"tsserver", "eslint", "elixirls", "elmls"},
         handlers = {
@@ -73,13 +74,13 @@ return {
                 }
               }
             })
-          end
+          end,
         },
       })
 
       -- cmp stuff
       local cmp = require("cmp")
-      local cmp_action = lsp_zero.cmp_action()
+      -- local cmp_action = lsp_zero.cmp_action()
       local cmp_format = lsp_zero.cmp_format()
       require("luasnip.loaders.from_vscode").lazy_load()
       cmp.setup({

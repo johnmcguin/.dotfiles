@@ -49,3 +49,6 @@ vim.keymap.set("v", "y", "ygv^")
 vim.keymap.set("n", "gl", "<cmd>lua vim.diagnostic.open_float()<cr>", { desc = "Diagnostics - Open Float" })
 vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", { desc = "Diagnostics - previous diagnostic" })
 vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>", { desc = "Diagnostics - next diagnostic" })
+
+-- source 
+vim.keymap.set("n", "<leader>so", [[:source $MYVIMRC<CR>]], { desc = "[S]ource vimrc" })
