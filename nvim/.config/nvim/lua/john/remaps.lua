@@ -51,4 +51,8 @@ vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<cr>", { desc = "D
 vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<cr>", { desc = "Diagnostics - next diagnostic" })
 
 -- source 
-vim.keymap.set("n", "<leader>so", [[:source $MYVIMRC<CR>]], { desc = "[S]ource vimrc" })
+vim.keymap.set("n", "<leader>so", function()
+    vim.cmd("source " .. vim.fn.stdpath("config") .. "/init.lua")
+end, { desc = "[S]ource config" })
+-- terminal keymaps
+vim.keymap.set("t", "<Esc><Esc>", "<C-\\><C-N>", { desc = "[S]ource vimrc" })
